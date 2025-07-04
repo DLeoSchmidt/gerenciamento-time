@@ -1,0 +1,67 @@
+--- Relatório de Jogadoras ---
+
+--- Detalhes da Jogadora [1] ---
+Nome: Ana Basd
+Idade: 3 anos
+Altura: 5.00 m
+Peso: 6 kg
+Posição: Meia Direito
+Passe para venda: 4 mil R$
+Valor de Aquisição: 5 mil R$
+Salário: 4 mil R$
+Estado: Ativa
+
+--- Detalhes da Jogadora [5] ---
+Nome: b
+Idade: 3 anos
+Altura: 4.00 m
+Peso: 5 kg
+Posição: Meia Esquerdo
+Passe para venda: 7 mil R$
+Valor de Aquisição: 8 mil R$
+Salário: 9 mil R$
+Estado: Ativa
+
+--- Detalhes da Jogadora [8] ---
+Nome: e
+Idade: 3 anos
+Altura: 4.00 m
+Peso: 653 kg
+Posição: Meia Esquerdo
+Passe para venda: 5 mil R$
+Valor de Aquisição: 463 mil R$
+Salário: 654 mil R$
+Estado: Ativa
+
+--- Detalhes da Jogadora [9] ---
+Nome: f
+Idade: 3 anos
+Altura: 4.00 m
+Peso: 56 kg
+Posição: Lateral Esquerda
+Passe para venda: 6 mil R$
+Valor de Aquisição: 7 mil R$
+Salário: 34 mil R$
+Estado: Ativa
+
+--- Detalhes da Jogadora [10] ---
+Nome: g
+Idade: 4 anos
+Altura: 53.00 m
+Peso: 6 kg
+Posição: Lateral Direita
+Passe para venda: 6 mil R$
+Valor de Aquisição: 756 mil R$
+Salário: 34 mil R$
+Estado: Ativa
+
+--- Detalhes da Jogadora [12] ---
+Nome: h
+Idade: 3 anos
+Altura: 5.00 m
+Peso: 346 kg
+Posição: Lateral Esquerda
+Passe para venda: 45 mil R$
+Valor de Aquisição: 63 mil R$
+Salário: 6 mil R$
+Estado: Ativa

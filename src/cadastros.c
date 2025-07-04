@@ -123,16 +123,13 @@ void alterar_jogadora_por_nome(team_t *criciuma){
     while(jogadora){
         if(jogadora->dados.id==temp_id){
             switch(opcao){
-                case 0:
-                    jogadora->dados.estado=0;
-                break;
                 case 1:
                     jogadora->dados.estado=1;
                     definir_cor(COR_VERDE, -1, ESTILO_NORMAL); printf("Digite o valor de venda da jogadora: "); resetar_cor();
                     scanf("%d",&jogadora->dados.valor_de_venda);
                 break;
-                case 2:
-                    jogadora->dados.estado=2;
+                default:
+                jogadora->dados.estado=opcao;
                 break;
             }
 			break;

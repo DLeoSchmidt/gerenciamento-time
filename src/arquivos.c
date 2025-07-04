@@ -92,6 +92,9 @@ void exportar_jogadoras_txt(FILE *arquivo, int *ids, jogadoras_t *primeira, int 
                 if(jogadora_atual->dados.id == *(ids + i)){ deve_exportar = 1; break; }
             }
         }
+        if(jogadora_atual->dados.estado==3){
+            deve_exportar=0;
+        }
         if(deve_exportar){
             fprintf(arquivo, "\n--- Detalhes da Jogadora [%d] ---\n", jogadora_atual->dados.id);
             fprintf(arquivo, "Nome: %s\n", jogadora_atual->dados.nome);
@@ -159,6 +162,9 @@ int exportar_jogadoras_csv(FILE *arquivo, int *ids, jogadoras_t*primeira, int qt
                 }
             }
         }
+        if(jogadora_atual->dados.estado==3){
+            deve_exportar=0;
+        }
         if(deve_exportar){
             encontradas++;
             int valor_venda_final;
@@ -202,6 +208,9 @@ int exportar_jogadoras_html(FILE *arquivo, int *ids, jogadoras_t* primeira, int 
                     break;
                 }
             }
+        }
+        if(jogadora_atual->dados.estado==3){
+            deve_exportar=0;
         }
         if(deve_exportar){
             encontradas++;

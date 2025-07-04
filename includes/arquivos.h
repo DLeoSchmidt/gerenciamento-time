@@ -1,10 +1,10 @@
 #ifndef ARQUIVOS_H
 #define ARQUIVOS_H
 
-#define FORMATO_TELA 1
-#define FORMATO_TXT  2
-#define FORMATO_CSV  3
-#define FORMATO_HTML 4
+#define FORMATO_TELA 0
+#define FORMATO_TXT  1
+#define FORMATO_CSV  2
+#define FORMATO_HTML 3
 
 #include "types.h"
 #include "utils.h"

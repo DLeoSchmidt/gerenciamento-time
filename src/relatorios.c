@@ -105,7 +105,7 @@ void gerar_relatorios(int opc, team_t*criciuma){
 }
 
 void saida_de_dados_relatorios(int encontradas, int opc, int opc_exp, int * ids, int qtd_ids, team_t * criciuma){
-    if (opc_exp == 1) return;
+    if (opc_exp == FORMATO_TELA) return;
     if(encontradas != 0){ 
         definir_cor(COR_AMARELO,-1,ESTILO_NORMAL); printf("\nNenhum item encontrado para exportar.\n"); resetar_cor();
         return;
@@ -117,9 +117,9 @@ void saida_de_dados_relatorios(int encontradas, int opc, int opc_exp, int * ids,
     int itens_exportados = 0;
 
     switch(opc_exp){
-        case 2: extensao = ".txt"; break;
-        case 3: extensao = ".csv"; break;
-        case 4: extensao = ".html"; break;
+        case FORMATO_TXT: extensao = ".txt"; break;
+        case FORMATO_CSV: extensao = ".csv"; break;
+        case FORMATO_HTML: extensao = ".html"; break;
     }
 
     obter_nome_arquivo(nome_arquivo, extensao);
@@ -131,15 +131,15 @@ void saida_de_dados_relatorios(int encontradas, int opc, int opc_exp, int * ids,
     }
     switch(opc){
         case 1: case 2: case 3: case 4: case 5: case 6: case 7: case 8:
-            if(opc_exp == 2) exportar_jogadoras_txt(arquivo, ids, criciuma->primeira_jogadora, qtd_ids);
-            if(opc_exp == 3) exportar_jogadoras_csv(arquivo, ids, criciuma->primeira_jogadora, qtd_ids);
-            if(opc_exp == 4) exportar_jogadoras_html(arquivo, ids, criciuma->primeira_jogadora, qtd_ids);
+            if(opc_exp == FORMATO_TXT) exportar_jogadoras_txt(arquivo, ids, criciuma->primeira_jogadora, qtd_ids);
+            if(opc_exp == FORMATO_CSV) exportar_jogadoras_csv(arquivo, ids, criciuma->primeira_jogadora, qtd_ids);
+            if(opc_exp == FORMATO_HTML) exportar_jogadoras_html(arquivo, ids, criciuma->primeira_jogadora, qtd_ids);
             itens_exportados = 1;
         break;
         case 9:
-            if(opc_exp == 2) exportar_jogos_txt(arquivo, ids, criciuma, qtd_ids);
-            if(opc_exp == 3) exportar_jogos_csv(arquivo, ids, criciuma, qtd_ids);
-            if(opc_exp == 4) exportar_jogos_html(arquivo, ids, criciuma, qtd_ids);
+            if(opc_exp == FORMATO_TXT) exportar_jogos_txt(arquivo, ids, criciuma, qtd_ids);
+            if(opc_exp == FORMATO_CSV) exportar_jogos_csv(arquivo, ids, criciuma, qtd_ids);
+            if(opc_exp == FORMATO_HTML) exportar_jogos_html(arquivo, ids, criciuma, qtd_ids);
             itens_exportados = 1;
         break;
         case 10:
@@ -167,23 +167,26 @@ int relatorio_jogadoras(int * ids, jogadoras_t * jogadoras, int qtd_ids){
     int encontradas = 1;
     if(!ids){
         while(jogadoras){
-            mostrar_jogadora(jogadoras);
+            if(jogadoras->dados.estado!=3){
+                mostrar_jogadora(jogadoras);
+                encontradas = 0;
+            }
             jogadoras=jogadoras->proxima;
-            encontradas = 0;
         }
     } else {
         while(jogadoras){
-            for(int i =0;i<qtd_ids;i++){
-                if(jogadoras->dados.id==*(ids+i)){
-                    mostrar_jogadora(jogadoras);
-                    encontradas = 0;
-                    break;
+            if(jogadoras->dados.estado!=3){
+                for(int i =0;i<qtd_ids;i++){
+                    if(jogadoras->dados.id==*(ids+i)){
+                        mostrar_jogadora(jogadoras);
+                        encontradas = 0;
+                        break;
+                    }
                 }
             }
             jogadoras=jogadoras->proxima;
         }
     }
-    
 	return encontradas;
 }
 

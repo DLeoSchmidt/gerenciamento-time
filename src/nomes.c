@@ -6,7 +6,7 @@ string nome_posicoes[] = {
 };
 
 string nome_estado[] = {
-    "Ativa","Vendida","Em recuperação médica"
+    "Ativa","Vendida","Em recuperação médica","Oculto"
 };
 
 string nome_resultados[] = {

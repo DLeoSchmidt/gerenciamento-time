@@ -10,7 +10,7 @@ extern string nome_estado[];
 extern string nome_resultados[];
 
 #define POSICOES_QTD 11
-#define ESTADOS_QTD 3
+#define ESTADOS_QTD 4
 #define RESULTADOS_QTD 3
 
 #endif

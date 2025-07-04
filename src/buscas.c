@@ -124,7 +124,7 @@ void gerar_buscas(int opc, team_t* criciuma){
 }
 
 void saida_de_dados_buscas(int encontradas, int opc, int opc_exp, int * ids, int qtd_ids, team_t * criciuma){
-    if (opc_exp == 1) return;
+    if (opc_exp == FORMATO_TELA) return;
     if(encontradas != 0){ 
         definir_cor(COR_AMARELO,-1,ESTILO_NORMAL); printf("\nNenhum item encontrado para exportar.\n"); resetar_cor();
         return;
@@ -136,9 +136,9 @@ void saida_de_dados_buscas(int encontradas, int opc, int opc_exp, int * ids, int
     int itens_exportados = 0;
 
     switch(opc_exp){
-        case 2: extensao = ".txt"; break;
-        case 3: extensao = ".csv"; break;
-        case 4: extensao = ".html"; break;
+        case FORMATO_TXT: extensao = ".txt"; break;
+        case FORMATO_CSV: extensao = ".csv"; break;
+        case FORMATO_HTML: extensao = ".html"; break;
         default: return;
     }
 
@@ -153,14 +153,14 @@ void saida_de_dados_buscas(int encontradas, int opc, int opc_exp, int * ids, int
     }
 
     if (opc >= 1 && opc <= 10) {
-        if(opc_exp == 2) exportar_jogadoras_txt(arquivo, ids, criciuma->primeira_jogadora, qtd_ids);
-        if(opc_exp == 3) exportar_jogadoras_csv(arquivo, ids, criciuma->primeira_jogadora, qtd_ids);
-        if(opc_exp == 4) exportar_jogadoras_html(arquivo, ids, criciuma->primeira_jogadora, qtd_ids);
+        if(opc_exp == FORMATO_TXT) exportar_jogadoras_txt(arquivo, ids, criciuma->primeira_jogadora, qtd_ids);
+        if(opc_exp == FORMATO_CSV) exportar_jogadoras_csv(arquivo, ids, criciuma->primeira_jogadora, qtd_ids);
+        if(opc_exp == 3) exportar_jogadoras_html(arquivo, ids, criciuma->primeira_jogadora, qtd_ids);
         itens_exportados = 1;
     } else if (opc >= 11 && opc <= 16) {
-        if(opc_exp == 2) exportar_jogos_txt(arquivo, ids, criciuma, qtd_ids);
-        if(opc_exp == 3) exportar_jogos_csv(arquivo, ids, criciuma, qtd_ids);
-        if(opc_exp == 4) exportar_jogos_html(arquivo, ids, criciuma, qtd_ids);
+        if(opc_exp == FORMATO_TXT) exportar_jogos_txt(arquivo, ids, criciuma, qtd_ids);
+        if(opc_exp == FORMATO_CSV) exportar_jogos_csv(arquivo, ids, criciuma, qtd_ids);
+        if(opc_exp == FORMATO_HTML) exportar_jogos_html(arquivo, ids, criciuma, qtd_ids);
         itens_exportados = 1;
     }
     
@@ -180,7 +180,7 @@ int *busca_jogadora_nome(char * nome_busca,team_t * criciuma, int *qtd_ids){
     *ids=-1;
 	*qtd_ids=0;
     for(int i=0; i<criciuma->qtd_jogadoras; i++){
-        if(strstr(aux->dados.nome, nome_busca) != NULL){ //strstr para buscar substring
+        if(aux->dados.estado!=3 && strstr(aux->dados.nome, nome_busca) != NULL){ //strstr para buscar substring
             if(*qtd_ids>0){
                 ids=realloc(ids,sizeof(int)*(*qtd_ids+1));
                 if (!ids) return NULL;

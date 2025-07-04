@@ -5,10 +5,10 @@ int menu_exportar(void){
     definir_cor(COR_CIANO, -1, ESTILO_BOLD);
     printf("\nO que você deseja fazer agora?\n\n");
     resetar_cor();
-    definir_cor(COR_AMARELO, -1, ESTILO_NORMAL); printf("[1] "); resetar_cor(); printf("Continuar (Voltar)\n");
-    definir_cor(COR_AMARELO, -1, ESTILO_NORMAL); printf("[2] "); resetar_cor(); printf("Exportar para arquivo .txt\n");
-    definir_cor(COR_AMARELO, -1, ESTILO_NORMAL); printf("[3] "); resetar_cor(); printf("Exportar para arquivo .csv\n");
-    definir_cor(COR_AMARELO, -1, ESTILO_NORMAL); printf("[4] "); resetar_cor(); printf("Exportar para arquivo .html\n");
+    definir_cor(COR_AMARELO, -1, ESTILO_NORMAL); printf("[0] "); resetar_cor(); printf("Continuar (Voltar)\n");
+    definir_cor(COR_AMARELO, -1, ESTILO_NORMAL); printf("[1] "); resetar_cor(); printf("Exportar para arquivo .txt\n");
+    definir_cor(COR_AMARELO, -1, ESTILO_NORMAL); printf("[2] "); resetar_cor(); printf("Exportar para arquivo .csv\n");
+    definir_cor(COR_AMARELO, -1, ESTILO_NORMAL); printf("[3] "); resetar_cor(); printf("Exportar para arquivo .html\n");
     definir_cor(COR_VERDE, -1, ESTILO_NORMAL); printf("\n-> "); resetar_cor();
     scanf("%d", &opc);
     getchar();
