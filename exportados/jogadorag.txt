@@ -1,0 +1,12 @@
+--- Relatório de Jogadoras ---
+
+--- Detalhes da Jogadora [10] ---
+Nome: g
+Idade: 4 anos
+Altura: 53.00 m
+Peso: 6 kg
+Posição: Lateral Direita
+Passe para venda: 6 mil R$
+Valor de Aquisição: 756 mil R$
+Salário: 34 mil R$
+Estado: Ativa

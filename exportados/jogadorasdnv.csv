@@ -1,0 +1,15 @@
+ID;Nome;Idade;Altura;Peso;Posição;Passe para Venda (mil R$);Valor de Aquisição (mil R$);Salario (mil R$);Estado;Valor de Venda (mil R$)
+1;"Ana Basd";3;5.00;6;"Meia Direito";4;5;4;"Ativa";-1
+2;"Picolo bas";54;5.00;2;"Lateral Esquerda";7;4;5;"Ativa";-1
+3;"Loas dads dasd";5;6.00;7;"Atacante";9;1;2;"Vendida";1500
+4;"a";1;2.00;3;"Lateral Direita";5;6;7;"Ativa";-1
+5;"b";3;4.00;5;"Meia Esquerdo";7;8;9;"Ativa";-1
+6;"c";1;2.00;3;"Lateral Direita";5;6;7;"Ativa";-1
+7;"d";234;63.00;34;"Meia Esquerdo";34;634;34;"Ativa";-1
+8;"e";3;4.00;653;"Meia Esquerdo";5;463;654;"Ativa";-1
+9;"f";3;4.00;56;"Lateral Esquerda";6;7;34;"Ativa";-1
+10;"g";4;53.00;6;"Lateral Direita";6;756;34;"Ativa";-1
+11;"34";56;473.00;745;"Lateral Direita";5;6;7;"Ativa";-1
+12;"h";3;5.00;346;"Lateral Esquerda";45;63;6;"Ativa";-1
+13;"ab";2;4.00;5;"Meia Esquerdo";7;8;9;"Vendida";564
+15;"fddsfg";45;65.00;433;"Meia Central";456;456;45;"Ativa";-1

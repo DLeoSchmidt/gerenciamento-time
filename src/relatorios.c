@@ -95,8 +95,12 @@ void gerar_relatorios(int opc, team_t*criciuma){
 
     do {
         opc_exp = menu_exportar();
+        while(!(opc_exp>=0 && opc_exp<=3)){
+            definir_cor(COR_VERMELHO, -1, ESTILO_BOLD); printf("\nOpção invalida!!!\n"); resetar_cor();
+            opc_exp = menu_exportar();
+        }
         saida_de_dados_relatorios(encontradas,opc,opc_exp,ids,qtd_ids,criciuma);
-    } while (opc_exp !=1);
+    } while (opc_exp !=0);
 
     if(ids) free(ids);
     definir_cor(COR_ROXO,-1,ESTILO_NORMAL);
@@ -120,6 +124,7 @@ void saida_de_dados_relatorios(int encontradas, int opc, int opc_exp, int * ids,
         case FORMATO_TXT: extensao = ".txt"; break;
         case FORMATO_CSV: extensao = ".csv"; break;
         case FORMATO_HTML: extensao = ".html"; break;
+        default: return;
     }
 
     obter_nome_arquivo(nome_arquivo, extensao);

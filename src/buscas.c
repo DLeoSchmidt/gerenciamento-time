@@ -113,8 +113,12 @@ void gerar_buscas(int opc, team_t* criciuma){
     
     do {
         opc_exp = menu_exportar();
+        while(!(opc_exp>=0 && opc_exp<=3)){
+            definir_cor(COR_VERMELHO, -1, ESTILO_BOLD); printf("\nOpção invalida!!!\n"); resetar_cor();
+            opc_exp = menu_exportar();
+        }
         saida_de_dados_buscas(encontradas, opc, opc_exp, ids, qtd_ids, criciuma);
-    } while (opc_exp != 1);
+    } while (opc_exp != 0);
 
     if (ids) free(ids);
 

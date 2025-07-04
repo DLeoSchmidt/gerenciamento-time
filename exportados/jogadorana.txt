@@ -1,0 +1,12 @@
+--- Relatório de Jogadoras ---
+
+--- Detalhes da Jogadora [1] ---
+Nome: Ana Basd
+Idade: 3 anos
+Altura: 5.00 m
+Peso: 6 kg
+Posição: Meia Direito
+Passe para venda: 4 mil R$
+Valor de Aquisição: 5 mil R$
+Salário: 4 mil R$
+Estado: Ativa
